@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Expert real estate services in Cape Coral, Florida. Find your dream home with Sarah Coleman, top-producing realtor." />
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Sarah Coleman Realty - Cape Coral Real Estate Expert" />
+    <meta property="og:description" content="Expert guidance through every step of your real estate journey in Southwest Florida" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sarahcolemanrealty.com" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1200" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏠</text></svg>" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    
+    <!-- Config & Main Scripts -->
+    <script src="config.js" defer></script>
+    <script src="main.js" defer></script>
+    
+    <title>Sarah Coleman Realty - Cape Coral Real Estate Expert</title>
+</head>
+<body>
+    
+    <!-- ============================================ -->
+    <!-- NAVIGATION                                   -->
+    <!-- ============================================ -->
+    <nav id="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="#" class="nav-logo" data-section="home">
+                    <span class="logo-text">SC</span>
+                    <span class="logo-full">Sarah Coleman Realty</span>
+                </a>
+            </div>
+            
+            <button class="nav-hamburger" id="hamburgerBtn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="nav-right" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-section="listings">Listings</a></li>
+                    <li><a href="#" class="nav-link" data-section="about">About</a></li>
+                    <li><a href="#" class="nav-link" data-section="contact">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-secondary nav-cta" data-section="valuation">
+                    Get Valuation
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Overlay Menu -->
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-menu-container">
+            <button class="mobile-close" id="mobileCloseBtn" aria-label="Close menu">✕</button>
+            <ul class="mobile-nav-links">
+                <li><a href="#" class="mobile-nav-link" data-section="home">Home</a></li>
+                <li><a href="#" class="mobile-nav-link" data-section="listings">Listings</a></li>
+                <li><a href="#" class="mobile-nav-link" data-section="about">About</a></li>
+                <li><a href="#" class="mobile-nav-link" data-section="contact">Contact</a></li>
+                <li><a href="#" class="mobile-nav-link mobile-cta" data-section="valuation">Get Free Valuation</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- PAGE WRAPPER                                 -->
+    <!-- ============================================ -->
+    <main id="pageWrapper">
+        
+        <!-- ========================================== -->
+        <!-- SECTION: HOME / HERO                       -->
+        <!-- ========================================== -->
+        <section id="section-home" class="page-section active-section" data-section-name="home">
+            <div class="hero-section" style="background-image: linear-gradient(135deg, rgba(27,58,92,0.85) 0%, rgba(13,27,42,0.6) 100%), url('https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1920&q=80');">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <span class="hero-label">Florida Real Estate Expert</span>
+                        <h1 class="hero-headline" data-config="heroHeadline">Find Your Dream Home in Cape Coral</h1>
+                        <p class="hero-subheadline" data-config="heroSubheadline">Expert guidance through every step of your real estate journey in Southwest Florida</p>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary" data-section="listings">View Listings</a>
+                            <a href="#" class="btn btn-outline" data-section="valuation">Free Home Valuation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-floating-stats glass-card">
+                        <span class="floating-icon">🏠</span>
+                        <span class="floating-number">250+</span>
+                        <span class="floating-label">Homes Sold</span>
+                    </div>
+                    
+                    <div class="scroll-indicator">
+                        <span class="scroll-text">Scroll</span>
+                        <svg class="scroll-chevron" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Hero Wave Divider -->
+                <div class="wave-divider wave-hero-bottom">
+                    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+                        <path d="M0,60 C360,120 1080,0 1440,60 L1440,120 L0,120 Z" fill="#F8F9FF"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- SECTION: STATS BAR                         -->
+        <!-- ========================================== -->
+        <section id="section-stats" class="page-section" data-section-name="stats">
+            <div class="stats-section">
+                <!-- Stats Wave Top -->
+                <div class="wave-divider wave-stats-top">
+                    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+                        <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#1B3A5C"/>
+                    </svg>
+                </div>
+                
+                <div class="stats-container">
+                    <div class="stats-grid" id="statsGrid">
+                        <!-- Stats will be rendered by JavaScript -->
+                    </div>
+                </div>
+                
+                <!-- Stats Wave Bottom -->
+                <div class="wave-divider wave-stats-bottom">
+                    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+                        <path d="M0,40 C480,80 960,0 1440,40 L1440,80 L0,80 Z" fill="#F8F9FF"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- SECTION: LISTINGS                          -->
+        <!-- ========================================== -->
+        <section id="section-listings" class="page-section" data-section-name="listings">
+            <div class="listings-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-accent-line"></div>
+                        <h2 class="section-title">Featured Properties</h2>
+                        <p class="section-subtitle">Discover our curated selection of premium homes in Southwest Florida</p>
+                    </div>
+                    
+                    <!-- Filter Bar -->
+                    <div class="filter-bar" id="filterBar">
+                        <button class="filter-btn active" data-filter="all">All Properties</button>
+                        <button class="filter-btn" data-filter="under300">Under $300k</button>
+                        <button class="filter-btn" data-filter="300to500">$300k - $500k</button>
+                        <button class="filter-btn" data-filter="over500">$500k+</button>
+                    </div>
+                    
+                    <!-- Listings Grid -->
+                    <div class="listings-grid" id="listingsGrid">
+                        <!-- Listings will be rendered by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- SECTION: ABOUT                             -->
+        <!-- ========================================== -->
+        <section id="section-about" class="page-section" data-section-name="about">
+            <div class="about-section">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-image-wrapper animate-hidden" data-animate="slide-right">
+                            <div class="about-image-container">
+                                <img 
+                                    src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=800&q=80" 
+                                    alt="Sarah Coleman - Real Estate Agent" 
+                                    class="about-image"
+                                    loading="lazy"
+                                />
+                                <div class="experience-badge glass-card">
+                                    <span class="experience-number">10+</span>
+                                    <span class="experience-label">Years Experience</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-content animate-hidden" data-animate="slide-left">
+                            <div class="section-accent-line"></div>
+                            <h2 class="section-title" data-config="agentName">Sarah Coleman</h2>
+                            <p class="about-title" data-config="agentTitle">Florida Licensed Realtor</p>
+                            <p class="about-bio" data-config="agentBio">Sarah Coleman is a top-producing real estate agent specializing in Cape Coral and surrounding areas. With over 10 years of experience helping families find their dream homes in Southwest Florida...</p>
+                            
+                            <div class="credentials" id="credentialsContainer">
+                                <!-- Credentials will be rendered by JavaScript -->
+                            </div>
+                            
+                            <a href="#" class="btn btn-primary" data-section="contact">Contact Sarah</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- SECTION: CONTACT                           -->
+        <!-- ========================================== -->
+        <section id="section-contact" class="page-section" data-section-name="contact">
+            <div class="contact-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-accent-line"></div>
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p class="section-subtitle">Let's discuss your real estate goals and find the perfect solution</p>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <!-- Left: Contact Info -->
+                        <div class="contact-info animate-hidden" data-animate="slide-right">
+                            <div class="contact-info-card">
+                                <h3>Contact Information</h3>
+                                <p>Reach out to us through any of these channels</p>
+                                
+                                <div class="contact-details">
+                                    <div class="contact-item">
+                                        <span class="contact-icon">📞</span>
+                                        <div>
+                                            <span class="contact-label">Phone</span>
+                                            <a href="tel:+15551234567" class="contact-value" data-config="phone">555-123-4567</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="contact-icon">✉️</span>
+                                        <div>
+                                            <span class="contact-label">Email</span>
+                                            <a href="mailto:sarah@sarahcolemanrealty.com" class="contact-value" data-config="email">sarah@sarahcolemanrealty.com</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="contact-icon">💬</span>
+                                        <div>
+                                            <span class="contact-label">WhatsApp</span>
+                                            <a href="https://wa.me/15551234567" class="contact-value" data-config="whatsapp">+1 (555) 123-4567</a>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="contact-icon">📍</span>
+                                        <div>
+                                            <span class="contact-label">Address</span>
+                                            <span class="contact-value" data-config="address">123 Main St, Cape Coral, FL 33990</span>
+                                        </div>
+                                    </div>
+                                    <div class="contact-item">
+                                        <span class="contact-icon">🕐</span>
+                                        <div>
+                                            <span class="contact-label">Working Hours</span>
+                                            <span class="contact-value" data-config="workingHours">Mon-Sat: 9AM - 7PM</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="contact-social">
+                                    <a href="#" class="social-link" data-config="instagram" aria-label="Instagram">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                                    </a>
+                                    <a href="#" class="social-link" data-config="facebook" aria-label="Facebook">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                    </a>
+                                    <a href="#" class="social-link" data-config="linkedin" aria-label="LinkedIn">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Right: Contact Form -->
+                        <div class="contact-form-wrapper animate-hidden" data-animate="slide-left">
+                            <form id="contactForm" class="contact-form" novalidate>
+                                <h3>Send a Message</h3>
+                                <p>We'll get back to you within 24 hours</p>
+                                
+                                <div class="form-group floating-group">
+                                    <input type="text" id="contactName" class="form-input" required />
+                                    <label for="contactName" class="form-label">Full Name</label>
+                                    <span class="form-error">Please enter your name</span>
+                                </div>
+                                
+                                <div class="form-group floating-group">
+                                    <input type="email" id="contactEmail" class="form-input" required />
+                                    <label for="contactEmail" class="form-label">Email Address</label>
+                                    <span class="form-error">Please enter a valid email</span>
+                                </div>
+                                
+                                <div class="form-group floating-group">
+                                    <input type="tel" id="contactPhone" class="form-input" />
+                                    <label for="contactPhone" class="form-label">Phone Number</label>
+                                    <span class="form-error">Please enter a valid phone number</span>
+                                </div>
+                                
+                                <div class="form-group floating-group">
+                                    <select id="contactInterest" class="form-input">
+                                        <option value="">Select your interest</option>
+                                        <option value="buying">Buying a Home</option>
+                                        <option value="selling">Selling a Home</option>
+                                        <option value="both">Both Buying & Selling</option>
+                                        <option value="investing">Real Estate Investing</option>
+                                    </select>
+                                    <label for="contactInterest" class="form-label">Interested In</label>
+                                </div>
+                                
+                                <div class="form-group floating-group">
+                                    <textarea id="contactMessage" class="form-input" rows="4" required></textarea>
+                                    <label for="contactMessage" class="form-label">Your Message</label>
+                                    <span class="form-error">Please enter a message</span>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full" id="contactSubmitBtn">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-spinner hidden">⏳</span>
+                                </button>
+                                
+                                <div class="form-success hidden" id="contactSuccess">
+                                    <span class="success-icon">✅</span>
+                                    <p>Message sent successfully! We'll contact you soon.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- SECTION: VALUATION                         -->
+        <!-- ========================================== -->
+        <section id="section-valuation" class="page-section" data-section-name="valuation">
+            <div class="valuation-section">
+                <div class="container">
+                    <div class="valuation-content">
+                        <div class="section-header valuation-header">
+                            <div class="section-accent-line"></div>
+                            <h2 class="section-title">What Is My Home Worth?</h2>
+                            <p class="section-subtitle">Get a free, no-obligation home valuation from a local expert</p>
+                        </div>
+                        
+                        <!-- How It Works -->
+                        <div class="valuation-steps">
+                            <div class="step-item animate-hidden" data-animate="fade-up" data-stagger="1">
+                                <div class="step-number">1</div>
+                                <h4>Fill In Details</h4>
+                                <p>Tell us about your property</p>
+                            </div>
+                            <div class="step-item animate-hidden" data-animate="fade-up" data-stagger="2">
+                                <div class="step-number">2</div>
+                                <h4>Get Analysis</h4>
+                                <p>We analyze local market data</p>
+                            </div>
+                            <div class="step-item animate-hidden" data-animate="fade-up" data-stagger="3">
+                                <div class="step-number">3</div>
+                                <h4>Receive Valuation</h4>
+                                <p>Get your report within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Valuation Form -->
+                        <div class="valuation-form-wrapper">
+                            <form id="valuationForm" class="valuation-form" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <input type="text" id="valName" class="form-input" required />
+                                        <label for="valName" class="form-label">Full Name</label>
+                                        <span class="form-error">Please enter your name</span>
+                                    </div>
+                                    <div class="form-group floating-group">
+                                        <input type="email" id="valEmail" class="form-input" required />
+                                        <label for="valEmail" class="form-label">Email Address</label>
+                                        <span class="form-error">Please enter a valid email</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <input type="tel" id="valPhone" class="form-input" required />
+                                        <label for="valPhone" class="form-label">Phone Number</label>
+                                        <span class="form-error">Please enter a valid phone number</span>
+                                    </div>
+                                    <div class="form-group floating-group">
+                                        <input type="text" id="valAddress" class="form-input" required />
+                                        <label for="valAddress" class="form-label">Property Address</label>
+                                        <span class="form-error">Please enter the property address</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <input type="text" id="valCity" class="form-input" required />
+                                        <label for="valCity" class="form-label">City</label>
+                                        <span class="form-error">Please enter the city</span>
+                                    </div>
+                                    <div class="form-group floating-group">
+                                        <select id="valBedrooms" class="form-input" required>
+                                            <option value="">Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3" selected>3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5+</option>
+                                        </select>
+                                        <label for="valBedrooms" class="form-label">Bedrooms</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <select id="valBathrooms" class="form-input" required>
+                                            <option value="">Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2" selected>2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                        <label for="valBathrooms" class="form-label">Bathrooms</label>
+                                    </div>
+                                    <div class="form-group floating-group">
+                                        <select id="valCondition" class="form-input" required>
+                                            <option value="">Select</option>
+                                            <option value="excellent">Excellent</option>
+                                            <option value="good" selected>Good</option>
+                                            <option value="average">Average</option>
+                                            <option value="needs-work">Needs Work</option>
+                                        </select>
+                                        <label for="valCondition" class="form-label">Property Condition</label>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group floating-group">
+                                        <input type="number" id="valSqft" class="form-input" required />
+                                        <label for="valSqft" class="form-label">Square Footage</label>
+                                        <span class="form-error">Please enter the square footage</span>
+                                    </div>
+                                    <div class="form-group floating-group">
+                                        <select id="valPropertyType" class="form-input" required>
+                                            <option value="">Select</option>
+                                            <option value="single-family">Single Family</option>
+                                            <option value="condo">Condo</option>
+                                            <option value="townhouse">Townhouse</option>
+                                            <option value="land">Land</option>
+                                            <option value="multi-family">Multi-Family</option>
+                                        </select>
+                                        <label for="valPropertyType" class="form-label">Property Type</label>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-full" id="valuationSubmitBtn">
+                                    <span class="btn-text">Get Free Valuation</span>
+                                    <span class="btn-spinner hidden">⏳</span>
+                                </button>
+                                
+                                <div class="form-success hidden" id="valuationSuccess">
+                                    <span class="success-icon">✅</span>
+                                    <p>Valuation request submitted! You'll receive your report within 24 hours.</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- SECTION: TESTIMONIALS                      -->
+        <!-- ========================================== -->
+        <section id="section-testimonials" class="page-section" data-section-name="testimonials">
+            <div class="testimonials-section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="section-accent-line"></div>
+                        <h2 class="section-title">What Our Clients Say</h2>
+                        <p class="section-subtitle">Real stories from real people who found their dream homes</p>
+                    </div>
+                    
+                    <div class="testimonials-grid" id="testimonialsGrid">
+                        <!-- Testimonials will be rendered by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ========================================== -->
+        <!-- FOOTER                                     -->
+        <!-- ========================================== -->
+        <footer class="footer">
+            <!-- Footer Wave -->
+            <div class="wave-divider wave-footer-top">
+                <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                    <path d="M0,50 C360,100 1080,0 1440,50 L1440,100 L0,100 Z" fill="#0D1B2A"/>
+                </svg>
+            </div>
+            
+            <div class="footer-content">
+                <div class="container">
+                    <div class="footer-grid">
+                        <!-- Left Column -->
+                        <div class="footer-col">
+                            <div class="footer-logo">
+                                <span class="logo-text">SC</span>
+                                <span class="logo-full">Sarah Coleman Realty</span>
+                            </div>
+                            <p class="footer-tagline" data-config="agentTitle">Florida Licensed Realtor</p>
+                            <p class="footer-description">Helping families find their dream homes in Cape Coral and Southwest Florida with expertise and care.</p>
+                            <div class="footer-social">
+                                <a href="#" class="social-link" data-config="instagram" aria-label="Instagram">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg>
+                                </a>
+                                <a href="#" class="social-link" data-config="facebook" aria-label="Facebook">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                                <a href="#" class="social-link" data-config="linkedin" aria-label="LinkedIn">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Center Column -->
+                        <div class="footer-col">
+                            <h4>Quick Links</h4>
+                            <ul class="footer-links">
+                                <li><a href="#" data-section="home">Home</a></li>
+                                <li><a href="#" data-section="listings">Listings</a></li>
+                                <li><a href="#" data-section="about">About</a></li>
+                                <li><a href="#" data-section="contact">Contact</a></li>
+                                <li><a href="#" data-section="valuation">Valuation</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div class="footer-col">
+                            <h4>Contact Info</h4>
+                            <ul class="footer-contact">
+                                <li>
+                                    <span>📞</span>
+                                    <a href="tel:+15551234567" data-config="phone">555-123-4567</a>
+                                </li>
+                                <li>
+                                    <span>✉️</span>
+                                    <a href="mailto:sarah@sarahcolemanrealty.com" data-config="email">sarah@sarahcolemanrealty.com</a>
+                                </li>
+                                <li>
+                                    <span>📍</span>
+                                    <span data-config="address">123 Main St, Cape Coral, FL 33990</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-bottom">
+                        <span>&copy; <span id="footerYear">2024</span> Sarah Coleman Realty. All rights reserved.</span>
+                        <span>Powered by <a href="#" class="footer-brand">RealtyStack</a></span>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+    </main>
+    
+</body>
+</html>
