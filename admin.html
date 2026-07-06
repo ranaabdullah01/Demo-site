@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Sarah Coleman Realty</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Admin Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="admin.css" />
+    
+    <script src="config.js" defer></script>
+    <script src="admin.js" defer></script>
+</head>
+<body>
+    
+    <!-- ============================================ -->
+    <!-- LOGIN PAGE                                   -->
+    <!-- ============================================ -->
+    <div id="loginPage" class="login-page">
+        <div class="login-background">
+            <!-- Background image with subtle pattern overlay -->
+            <div class="login-bg-image" style="background-image: linear-gradient(135deg, rgba(13,27,42,0.9) 0%, rgba(27,58,92,0.8) 100%), url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1920&q=80');">
+            </div>
+            
+            <div class="login-container">
+                <div class="login-card glass-card">
+                    <div class="login-logo">
+                        <span class="logo-text">SC</span>
+                        <span class="logo-full">Sarah Coleman</span>
+                    </div>
+                    <h2 class="login-title">Agent Admin Panel</h2>
+                    <p class="login-subtitle">Sign in to manage your leads and valuations</p>
+                    
+                    <form id="loginForm" class="login-form" novalidate>
+                        <div class="form-group floating-group">
+                            <input type="text" id="loginUsername" class="form-input" placeholder=" " required />
+                            <label for="loginUsername" class="form-label">Username</label>
+                            <span class="form-error">Please enter your username</span>
+                        </div>
+                        
+                        <div class="form-group floating-group">
+                            <input type="password" id="loginPassword" class="form-input" placeholder=" " required />
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                                <span class="toggle-icon">👁️</span>
+                            </button>
+                            <span class="form-error">Please enter your password</span>
+                        </div>
+                        
+                        <div id="loginError" class="login-error hidden">
+                            <span class="error-icon">⚠️</span>
+                            <span class="error-text">Invalid username or password. Please try again.</span>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" id="loginBtn">
+                            <span class="btn-text">Sign In</span>
+                            <span class="btn-spinner hidden">⏳</span>
+                        </button>
+                    </form>
+                    
+                    <p class="login-footer">Secure admin access for authorized agents only</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- ============================================ -->
+    <!-- DASHBOARD                                    -->
+    <!-- ============================================ -->
+    <div id="dashboardPage" class="dashboard-page hidden">
+        
+        <!-- Top Navigation -->
+        <nav class="admin-nav">
+            <div class="admin-nav-container">
+                <div class="admin-nav-left">
+                    <div class="admin-logo">
+                        <span class="logo-text">SC</span>
+                        <span class="logo-full">Admin</span>
+                    </div>
+                </div>
+                
+                <div class="admin-nav-center">
+                    <span class="admin-agent-name" id="adminAgentName">Sarah Coleman</span>
+                </div>
+                
+                <div class="admin-nav-right">
+                    <button class="btn btn-outline btn-sm" id="logoutBtn">
+                        <span class="logout-icon">🚪</span>
+                        Logout
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Dashboard Content -->
+        <div class="admin-content">
+            <div class="container">
+                
+                <!-- Stats Cards -->
+                <div class="stats-cards-grid" id="statsCards">
+                    <div class="stat-card-admin">
+                        <div class="stat-card-icon blue">📋</div>
+                        <div class="stat-card-content">
+                            <span class="stat-card-number" id="totalLeads">0</span>
+                            <span class="stat-card-label">Total Leads</span>
+                            <span class="stat-card-change up">↑ 12%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-admin">
+                        <div class="stat-card-icon green">🆕</div>
+                        <div class="stat-card-content">
+                            <span class="stat-card-number" id="newLeads">0</span>
+                            <span class="stat-card-label">New This Week</span>
+                            <span class="stat-card-change up">↑ 8%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-admin">
+                        <div class="stat-card-icon purple">🏠</div>
+                        <div class="stat-card-content">
+                            <span class="stat-card-number" id="totalValuations">0</span>
+                            <span class="stat-card-label">Valuations</span>
+                            <span class="stat-card-change down">↓ 3%</span>
+                        </div>
+                    </div>
+                    <div class="stat-card-admin">
+                        <div class="stat-card-icon gold">⭐</div>
+                        <div class="stat-card-content">
+                            <span class="stat-card-number" id="closedDeals">0</span>
+                            <span class="stat-card-label">Closed Deals</span>
+                            <span class="stat-card-change up">↑ 25%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab Navigation -->
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="contacts">
+                        <span class="tab-icon">✉️</span>
+                        Contact Leads
+                        <span class="tab-badge" id="contactBadge">0</span>
+                    </button>
+                    <button class="admin-tab" data-tab="valuations">
+                        <span class="tab-icon">📊</span>
+                        Valuation Requests
+                        <span class="tab-badge" id="valuationBadge">0</span>
+                    </button>
+                </div>
+                
+                <!-- Search Bar -->
+                <div class="admin-search">
+                    <div class="search-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search by name, email, or address..." />
+                        <button class="search-clear hidden" id="searchClear">✕</button>
+                    </div>
+                </div>
+                
+                <!-- Contacts Table -->
+                <div id="contactsTab" class="admin-tab-content active">
+                    <div class="table-wrapper">
+                        <table class="admin-table" id="contactsTable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Interest</th>
+                                    <th>Message</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="contactsBody">
+                                <!-- Rows rendered by JavaScript -->
+                            </tbody>
+                        </table>
+                        
+                        <!-- Empty State -->
+                        <div class="empty-state hidden" id="contactsEmpty">
+                            <span class="empty-icon">📭</span>
+                            <h4>No leads yet</h4>
+                            <p>Contact leads will appear here as they come in</p>
+                        </div>
+                        
+                        <!-- Loading Skeleton -->
+                        <div class="skeleton-wrapper" id="contactsSkeleton">
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Valuations Table -->
+                <div id="valuationsTab" class="admin-tab-content">
+                    <div class="table-wrapper">
+                        <table class="admin-table" id="valuationsTable">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Address</th>
+                                    <th>City</th>
+                                    <th>Beds/Baths</th>
+                                    <th>Condition</th>
+                                    <th>Sqft</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="valuationsBody">
+                                <!-- Rows rendered by JavaScript -->
+                            </tbody>
+                        </table>
+                        
+                        <!-- Empty State -->
+                        <div class="empty-state hidden" id="valuationsEmpty">
+                            <span class="empty-icon">🏠</span>
+                            <h4>No valuations yet</h4>
+                            <p>Valuation requests will appear here as they come in</p>
+                        </div>
+                        
+                        <!-- Loading Skeleton -->
+                        <div class="skeleton-wrapper" id="valuationsSkeleton">
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                            <div class="skeleton-row"><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div><div class="skeleton-cell"></div></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
